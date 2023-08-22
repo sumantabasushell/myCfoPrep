@@ -85,7 +85,7 @@ async def streaming_events():
             messg = str(payload)
             
         
-            ## Read invoke a different application to write message into RedPanda Topic..
+            ## Invoke a golang application to write message into RedPanda Topic.
             ## Will recommend to implement the code to write to RedPanda directly from within this Python program.
 
             cmd = ['/usr/local/go/bin/go', 'run','/Users/sumanta.basu/MyRnD/golang/kafka/produce_sf_message.go', messg]
